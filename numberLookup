@@ -1,0 +1,30 @@
+#!/usr/bin/php
+<?php
+$url = 'http://portal.aql.com/telecoms/network_lookup.php?number=%s&nlSubmit=submit';
+
+while(!feof(STDIN)) {
+    $number = trim(fgets(STDIN));
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, sprintf($url, $number));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $result = curl_exec($ch);
+    curl_close($ch);
+
+    $dom = new DOMDocument();
+    @$dom->loadHtml($result);
+    $items = $dom->getElementsByTagName('td');
+
+    $readValue = false;
+    foreach ($items as $item) {
+        if($item->nodeValue == "Network") {
+            $readValue = true;
+            continue;
+        }
+
+        if($readValue) {
+            echo $number . " - " . $item->nodeValue . "\n";
+        }
+
+        $readValue = false;
+    }
+}
