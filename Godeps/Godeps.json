@@ -8,6 +8,30 @@
 		{
 			"ImportPath": "golang.org/x/net/html",
 			"Rev": "6acef71eb69611914f7a30939ea9f6e194c78172"
+		},
+		{
+			"ImportPath": "golang.org/x/text/encoding",
+			"Rev": "a71fd10341b064c10f4a81ceac72bcf70f26ea34"
+		},
+		{
+			"ImportPath": "golang.org/x/text/internal/tag",
+			"Rev": "a71fd10341b064c10f4a81ceac72bcf70f26ea34"
+		},
+		{
+			"ImportPath": "golang.org/x/text/internal/utf8internal",
+			"Rev": "a71fd10341b064c10f4a81ceac72bcf70f26ea34"
+		},
+		{
+			"ImportPath": "golang.org/x/text/language",
+			"Rev": "a71fd10341b064c10f4a81ceac72bcf70f26ea34"
+		},
+		{
+			"ImportPath": "golang.org/x/text/runes",
+			"Rev": "a71fd10341b064c10f4a81ceac72bcf70f26ea34"
+		},
+		{
+			"ImportPath": "golang.org/x/text/transform",
+			"Rev": "a71fd10341b064c10f4a81ceac72bcf70f26ea34"
 		}
 	]
 }
