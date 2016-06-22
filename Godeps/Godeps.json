@@ -1,0 +1,13 @@
+{
+	"ImportPath": "github.com/george-infinity/number-lookup",
+	"GoVersion": "go1.6",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "golang.org/x/net/html",
+			"Rev": "6acef71eb69611914f7a30939ea9f6e194c78172"
+		}
+	]
+}
